@@ -48,9 +48,11 @@ tar xf resources.tar
 
 rm -rf ./static/
 cp -r ./template/ ./static/
+INVITE_ICON_BASE64="$(base64 ./resources/icon-invite.png -w 0)"
 
 find ./static -name "*.html" | while read -r html; do
 	sed -i "s/RESOURCES_VERSION/${RESOURCES_VERSION}/g" "$html"
+	sed -i "s:INVITE_ICON_BASE64:${INVITE_ICON_BASE64}:g" "$html"
 done
 
 mkdir -p ./static/imgs/
