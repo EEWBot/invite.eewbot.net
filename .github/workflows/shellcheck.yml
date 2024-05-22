@@ -10,7 +10,7 @@ jobs:
     name: runner / shellcheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.5
+      - uses: actions/checkout@v4.1.6
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1.20.0
         with:
