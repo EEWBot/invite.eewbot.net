@@ -1,0 +1,8 @@
+name = "invite-eewbot-net"
+compatibility_date = "2026-08-02"
+
+[build]
+command = "./build.sh"
+
+[assets]
+directory = "./static/"
